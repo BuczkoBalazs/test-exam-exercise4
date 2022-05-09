@@ -35,3 +35,154 @@
 
 /* END OF CSS RESET */
 
+:root {
+    --primary: #ffeedf;
+    --secondary: #145434;
+  }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    background-color: var(--primary);
+}
+
+#root header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid var(--secondary);
+    font-size: 36px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+#root header p {
+    margin-left: 20px;
+}
+
+#root header span {
+    margin-right: 20px;
+    font-size: 36px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    padding-bottom: 50px;
+    gap: 60px;
+}
+
+
+.card-container {
+    position: relative;
+    width: 360px;
+    height: 200px;
+    margin-top: 50px;
+    background-color: var(--secondary);
+}
+
+.card-container h1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--secondary);
+    border-radius: 50%;
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--secondary);
+    background-color: var(--primary);
+}
+
+.card-container h2 {
+    margin: 20px 20px 20px 20px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    color: var(--primary);
+}
+
+.card-container h3 {
+    margin: 20px 20px 0px 20px;
+    border-top: 1px solid var(--primary);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--primary);
+}
+
+.card-container h4 {
+    margin: 0px 0px 0px 20px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--primary);
+}
+
+.card-container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    width: 200px;
+    height: 50px;
+    border: 2px solid var(--secondary);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--secondary);
+    background-color: var(--primary);
+}
+
+.card-container button:hover {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    background-color: var(--secondary);
+}
+
+.card-container button span {
+    position: absolute;
+    right: 0;
+    font-size: 36px;
+}
+
+@media screen and (max-width: 900px) {
+    #root header {
+        flex-wrap: wrap;
+    }
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-container {
+        width: 100%;
+        max-width: 360px;
+    }
+}
+

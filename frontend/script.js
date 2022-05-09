@@ -65,7 +65,15 @@ const header = (logo) => {
     <header>
         <p>${logo}</p>
         <span class="material-symbols-outlined">menu</span>
-    </header>    
+    </header>
+    `
+};
+
+const cardsContainer = (cards) => {
+    return `
+    <div class="cards-container">
+        ${cards}
+    </div>
     `
 };
 
@@ -92,7 +100,7 @@ const loadEvent = () => {
 const rootElement = document.getElementById("root");
 
 rootElement.insertAdjacentHTML("beforeend", header(beers.logo));
-rootElement.insertAdjacentHTML("beforeend", createCards(beers.cards))
+rootElement.insertAdjacentHTML("beforeend", cardsContainer(createCards(beers.cards)));
     
 }
 
