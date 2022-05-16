@@ -68,6 +68,7 @@ body {
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
     color: var(--secondary);
+    z-index: 5;
 }
 
 #root header p {
